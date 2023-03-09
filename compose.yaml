@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql:8.0.27
+    command: '--default-authentication-plugin=mysql_native_password'
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD: AKIAQDVUGEICMVD2WSE5
+      - MYSQL_DATABASE: my-DB
+      - MYSQL_USER: admin
+      - MYSQL_PASSWORD: AKIAQDVUGEICMVD2WSE5
+      - MYSQL_HOST: <RDS_ENDPOINT>
+    expose:
+      - 3306
+      - 33060
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST: <RDS_ENDPOINT>
+      - WORDPRESS_DB_USER: admin
+      - WORDPRESS_DB_PASSWORD: AKIAQDVUGEICMVD2WSE5
+      - WORDPRESS_DB_NAME: my-DB
+volumes:
+  db_data:
+

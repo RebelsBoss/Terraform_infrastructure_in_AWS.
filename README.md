@@ -52,3 +52,5 @@ Step 8: Connect to RDS and start WordPress using Docker-compose
   - Run the Docker-compose file using the command "docker-compose up -d" on the instance.
   - Verify that WordPress is running correctly by navigating to the ALB endpoint in a web browser.
   - Your RDS and EC2 instances are now set up with VPC, ALB, NAT, Target group, and Security group, and Docker and Docker-compose are installed using Ansible-playbook. Additionally, WordPress is running on the EC2 instance and connected to RDS using Docker-compose.
+
+The Documentation.txt file contains links to sites from which I took information and created this project

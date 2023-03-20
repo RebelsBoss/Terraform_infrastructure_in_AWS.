@@ -6,10 +6,10 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD: AKIAQDVUGEICMVD2WSE5
-      - MYSQL_DATABASE: my-DB
-      - MYSQL_USER: admin
-      - MYSQL_PASSWORD: AKIAQDVUGEICMVD2WSE5
+      - MYSQL_ROOT_PASSWORD: 
+      - MYSQL_DATABASE:
+      - MYSQL_USER: 
+      - MYSQL_PASSWORD: 
       - MYSQL_HOST: <RDS_ENDPOINT>
     expose:
       - 3306
@@ -21,9 +21,9 @@ services:
     restart: always
     environment:
       - WORDPRESS_DB_HOST: <RDS_ENDPOINT>
-      - WORDPRESS_DB_USER: admin
-      - WORDPRESS_DB_PASSWORD: AKIAQDVUGEICMVD2WSE5
-      - WORDPRESS_DB_NAME: my-DB
+      - WORDPRESS_DB_USER: 
+      - WORDPRESS_DB_PASSWORD: 
+      - WORDPRESS_DB_NAME:
 volumes:
   db_data:
 

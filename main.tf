@@ -1,6 +1,4 @@
 provider "aws" {
-  access_key = "AKIAQDVUGEICMVD2WSE5"
-  secret_key = "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"
   region = var.region
 }
 
@@ -13,7 +11,7 @@ terraform {
   backend "s3" {
     bucket = "my-private-bucket-s3"
     key    = "terraform.tfstate"
-    region = "eu-west-1"
+    region = var.region
   }
 }
 
